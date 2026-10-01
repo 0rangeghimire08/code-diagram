@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeViz - AI Code-to-Diagram Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>⚡ CodeViz</h1>
+        <p>Paste raw code -> Get instant visual flowcharts</p>
+    </header>
+
+    <main class="workspace">
+        <!-- Left Panel: Code Input -->
+        <section class="panel editor-panel">
+            <div class="panel-header">
+                <span>Code Input</span>
+                <button id="generateBtn">🚀 Generate Diagram</button>
+            </div>
+            <textarea id="codeInput" placeholder="Paste your C, C++, Python, or JS code here..."></textarea>
+        </section>
+
+        <!-- Right Panel: Diagram Output -->
+        <section class="panel diagram-panel">
+            <div class="panel-header">
+                <span>Visual Flowchart</span>
+            </div>
+            <div id="loading" class="hidden">Generating diagram with AI...</div>
+            <div id="diagramOutput">
+                <!-- Diagram renders here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 1. Load Mermaid library FIRST -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    
+    <!-- 2. Load custom application logic SECOND -->
+    <script src="script.js"></script>
+</body>
+</html>
